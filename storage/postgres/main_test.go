@@ -8,7 +8,6 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"github.com/samandar2605/products/config"
 	"github.com/samandar2605/products/storage"
 )
 
@@ -17,15 +16,14 @@ var (
 )
 
 func TestMain(m *testing.M) {
-	cfg := config.Load("./../..")
 
 	connStr := fmt.Sprintf(
 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
-		cfg.PostConfig.Host,
-		cfg.PostConfig.Port,
-		cfg.PostConfig.User,
-		cfg.PostConfig.Password,
-		cfg.PostConfig.Database,
+		"localhost",
+		"5432",
+		"postgres",
+		"12345",
+		"products",
 	)
 
 	db, err := sqlx.Open("postgres", connStr)

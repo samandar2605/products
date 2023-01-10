@@ -5,6 +5,8 @@ import (
 	"errors"
 	"fmt"
 
+	_ "github.com/golang/mock/mockgen/model"
+
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
 	"github.com/samandar2605/products/storage/repo"

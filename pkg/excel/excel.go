@@ -23,6 +23,7 @@ func ReadExcel(filename string) (*[]repo.Product, error) {
 	for i, row := range rows {
 		product := repo.Product{}
 		if i == 0 {
+			
 			continue
 		}
 		for j, col := range row {

@@ -4,6 +4,7 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/samandar2605/products/storage/postgres"
 	"github.com/samandar2605/products/storage/repo"
+	_ "github.com/golang/mock/mockgen/model"
 )
 
 type StorageI interface {
